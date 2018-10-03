@@ -1,0 +1,14 @@
+{
+  "name": "scoreboard",
+  "version": "1.0.0",
+  "description": "A score keeping app",
+  "main": "app.js",
+  "scripts": {
+    "serve": "live-server"
+  },
+  "author": "Zack Jackson",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.0"
+  }
+}
