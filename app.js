@@ -1,3 +1,18 @@
+const players = [
+  {
+    name: "Player 1",
+    score: 50
+  },
+  {
+    name: "Player 2",
+    score: 85
+  },
+  {
+    name: "Player 3",
+    score: 95
+  }
+];
+
 const Header = props => (
   <header>
     <h1>{props.title}</h1>
@@ -20,11 +35,13 @@ const Player = props => (
   </div>
 );
 
-const App = () => (
+const App = props => (
   <div className="scoreboard">
-    <Header title="Scoreboard" totalPlayers={1} />
-    <Player name="Zack" score={35} />
+    <Header title="Scoreboard" totalPlayers={props.players.length} />
+    {props.players.map(player => (
+      <Player name={player.name} score={player.score} />
+    ))}
   </div>
 );
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(<App players={players} />, document.getElementById("root"));
