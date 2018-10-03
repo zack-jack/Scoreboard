@@ -7,4 +7,4 @@ function Header() {
   );
 }
 
-ReactDOM.render(header, document.getElementById("root"));
+ReactDOM.render(<Header />, document.getElementById("root"));
